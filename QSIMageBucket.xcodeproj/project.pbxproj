@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1856E1C11F3990A6003C5725 /* QSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856E1BF1F3990A6003C5725 /* QSUtils.m */; };
+		1870065F1F332885009D7AD2 /* AliOSSImagePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1870065D1F332885009D7AD2 /* AliOSSImagePreferencesViewController.xib */; };
+		187006601F332885009D7AD2 /* AliOSSImagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870065E1F332885009D7AD2 /* AliOSSImagePreferencesViewController.swift */; };
+		18EAE5D41F39AF28008A5F19 /* OSSBucketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAE5D11F39AF28008A5F19 /* OSSBucketModel.swift */; };
+		18EAE5D51F39AF28008A5F19 /* OSSBucketModelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAE5D21F39AF28008A5F19 /* OSSBucketModelParser.swift */; };
+		18EAE5D61F39AF28008A5F19 /* OSSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAE5D31F39AF28008A5F19 /* OSSClient.swift */; };
+		18EAE5D81F39B471008A5F19 /* AliOSSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAE5D71F39B471008A5F19 /* AliOSSConfig.swift */; };
+		18EAE5DC1F39CECD008A5F19 /* OSSRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EAE5DB1F39CECD008A5F19 /* OSSRequestModel.m */; };
+		A8682C395741CBC57CCF7BD8 /* Pods_QSIMageBucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C301C4BE1F58FB2D03C818 /* Pods_QSIMageBucket.framework */; };
+		DD0386E71E123C3E00864E9C /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0386E61E123C3E00864E9C /* AppCache.swift */; };
+		DD369FDB1D3CA0310080C369 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD369FD91D3CA0310080C369 /* GeneralViewController.swift */; };
+		DD369FDC1D3CA0310080C369 /* GeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD369FDA1D3CA0310080C369 /* GeneralViewController.xib */; };
+		DD373A601E4A0AD0002CC39F /* QNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD373A5F1E4A0AD0002CC39F /* QNConfig.swift */; };
+		DD373A621E4A13ED002CC39F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD373A611E4A13ED002CC39F /* AppConfig.swift */; };
+		DD4DB49C1D35EDF600FCD47C /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB49B1D35EDF600FCD47C /* AppHelper.swift */; };
+		DD7B7E601D322CC700B68805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B7E5F1D322CC700B68805 /* AppDelegate.swift */; };
+		DD7B7E621D322CC700B68805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7B7E611D322CC700B68805 /* Assets.xcassets */; };
+		DD7B7E741D322CEE00B68805 /* DragDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B7E711D322CEE00B68805 /* DragDestinationView.swift */; };
+		DD7B7E781D322D2200B68805 /* ImagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B7E761D322D2200B68805 /* ImagePreferencesViewController.swift */; };
+		DD7B7E791D322D2200B68805 /* ImagePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7B7E771D322D2200B68805 /* ImagePreferencesViewController.xib */; };
+		DD7B7E7B1D322D7200B68805 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7B7E7A1D322D7200B68805 /* MainMenu.xib */; };
+		DD9DCE061E632F63001C0BE5 /* SMMSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9DCE051E632F63001C0BE5 /* SMMSService.swift */; };
+		DDB6C2311E120378009B7EDD /* QNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB6C2301E120378009B7EDD /* QNService.swift */; };
+		DDC266071E5419B30061F5DA /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC266061E5419B30061F5DA /* ImageService.swift */; };
+		DDE7BB1F1D3F4295009031F3 /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BB1E1D3F4295009031F3 /* PasteboardObserver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1856E1BE1F3990A6003C5725 /* QSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSUtils.h; sourceTree = "<group>"; };
+		1856E1BF1F3990A6003C5725 /* QSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSUtils.m; sourceTree = "<group>"; };
+		1870065D1F332885009D7AD2 /* AliOSSImagePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AliOSSImagePreferencesViewController.xib; sourceTree = "<group>"; };
+		1870065E1F332885009D7AD2 /* AliOSSImagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliOSSImagePreferencesViewController.swift; sourceTree = "<group>"; };
+		18EAE5D11F39AF28008A5F19 /* OSSBucketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSSBucketModel.swift; sourceTree = "<group>"; };
+		18EAE5D21F39AF28008A5F19 /* OSSBucketModelParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSSBucketModelParser.swift; sourceTree = "<group>"; };
+		18EAE5D31F39AF28008A5F19 /* OSSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSSClient.swift; sourceTree = "<group>"; };
+		18EAE5D71F39B471008A5F19 /* AliOSSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliOSSConfig.swift; sourceTree = "<group>"; };
+		18EAE5D91F39CECD008A5F19 /* OSSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSDefine.h; sourceTree = "<group>"; };
+		18EAE5DA1F39CECD008A5F19 /* OSSRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSRequestModel.h; sourceTree = "<group>"; };
+		18EAE5DB1F39CECD008A5F19 /* OSSRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSRequestModel.m; sourceTree = "<group>"; };
+		4DCDD048A1815FE5E53EA3F3 /* Pods-QSIMageBucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSIMageBucket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSIMageBucket/Pods-QSIMageBucket.debug.xcconfig"; sourceTree = "<group>"; };
+		B1C301C4BE1F58FB2D03C818 /* Pods_QSIMageBucket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QSIMageBucket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0386E61E123C3E00864E9C /* AppCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
+		DD369FD91D3CA0310080C369 /* GeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		DD369FDA1D3CA0310080C369 /* GeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralViewController.xib; sourceTree = "<group>"; };
+		DD373A5F1E4A0AD0002CC39F /* QNConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QNConfig.swift; sourceTree = "<group>"; };
+		DD373A611E4A13ED002CC39F /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		DD4DB49B1D35EDF600FCD47C /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		DD7B7E5C1D322CC700B68805 /* QSIMageBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSIMageBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7B7E5F1D322CC700B68805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD7B7E611D322CC700B68805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD7B7E661D322CC700B68805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7B7E711D322CEE00B68805 /* DragDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDestinationView.swift; sourceTree = "<group>"; };
+		DD7B7E761D322D2200B68805 /* ImagePreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreferencesViewController.swift; sourceTree = "<group>"; };
+		DD7B7E771D322D2200B68805 /* ImagePreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreferencesViewController.xib; sourceTree = "<group>"; };
+		DD7B7E7A1D322D7200B68805 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		DD9DCE051E632F63001C0BE5 /* SMMSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMMSService.swift; sourceTree = "<group>"; };
+		DDB6C2301E120378009B7EDD /* QNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QNService.swift; sourceTree = "<group>"; };
+		DDC182E91D5C1A6600D40AA3 /* OC-birdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OC-birdge.h"; sourceTree = "<group>"; };
+		DDC266061E5419B30061F5DA /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		DDD7F02D1E6D433700B685D8 /* PicU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PicU.entitlements; sourceTree = "<group>"; };
+		DDE7BB1E1D3F4295009031F3 /* PasteboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardObserver.swift; sourceTree = "<group>"; };
+		E53AF96F97F05DBEE08DD030 /* Pods-QSIMageBucket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSIMageBucket.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSIMageBucket/Pods-QSIMageBucket.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD7B7E591D322CC700B68805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8682C395741CBC57CCF7BD8 /* Pods_QSIMageBucket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1856E1BA1F399078003C5725 /* QS-AliOSS */ = {
+			isa = PBXGroup;
+			children = (
+				18EAE5D11F39AF28008A5F19 /* OSSBucketModel.swift */,
+				18EAE5D21F39AF28008A5F19 /* OSSBucketModelParser.swift */,
+				18EAE5D31F39AF28008A5F19 /* OSSClient.swift */,
+				18EAE5D71F39B471008A5F19 /* AliOSSConfig.swift */,
+				18EAE5D91F39CECD008A5F19 /* OSSDefine.h */,
+				18EAE5DA1F39CECD008A5F19 /* OSSRequestModel.h */,
+				18EAE5DB1F39CECD008A5F19 /* OSSRequestModel.m */,
+				1856E1BE1F3990A6003C5725 /* QSUtils.h */,
+				1856E1BF1F3990A6003C5725 /* QSUtils.m */,
+			);
+			path = "QS-AliOSS";
+			sourceTree = "<group>";
+		};
+		8678AFDE00AA4AA14BB417A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DCDD048A1815FE5E53EA3F3 /* Pods-QSIMageBucket.debug.xcconfig */,
+				E53AF96F97F05DBEE08DD030 /* Pods-QSIMageBucket.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD7B7E531D322CC700B68805 = {
+			isa = PBXGroup;
+			children = (
+				DDD7F02D1E6D433700B685D8 /* PicU.entitlements */,
+				DD7B7E5E1D322CC700B68805 /* UPImage */,
+				DD7B7E5D1D322CC700B68805 /* Products */,
+				8678AFDE00AA4AA14BB417A0 /* Pods */,
+				F5DF376CCCFA2E6993D6955B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD7B7E5D1D322CC700B68805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD7B7E5C1D322CC700B68805 /* QSIMageBucket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD7B7E5E1D322CC700B68805 /* UPImage */ = {
+			isa = PBXGroup;
+			children = (
+				1856E1BA1F399078003C5725 /* QS-AliOSS */,
+				DD369FD91D3CA0310080C369 /* GeneralViewController.swift */,
+				DD369FDA1D3CA0310080C369 /* GeneralViewController.xib */,
+				DD7B7E761D322D2200B68805 /* ImagePreferencesViewController.swift */,
+				DD7B7E771D322D2200B68805 /* ImagePreferencesViewController.xib */,
+				1870065E1F332885009D7AD2 /* AliOSSImagePreferencesViewController.swift */,
+				1870065D1F332885009D7AD2 /* AliOSSImagePreferencesViewController.xib */,
+				DD7B7E711D322CEE00B68805 /* DragDestinationView.swift */,
+				DD7B7E5F1D322CC700B68805 /* AppDelegate.swift */,
+				DD7B7E7A1D322D7200B68805 /* MainMenu.xib */,
+				DD7B7E611D322CC700B68805 /* Assets.xcassets */,
+				DD7B7E661D322CC700B68805 /* Info.plist */,
+				DD4DB49B1D35EDF600FCD47C /* AppHelper.swift */,
+				DDE7BB1E1D3F4295009031F3 /* PasteboardObserver.swift */,
+				DDC182E91D5C1A6600D40AA3 /* OC-birdge.h */,
+				DD9DCE051E632F63001C0BE5 /* SMMSService.swift */,
+				DDB6C2301E120378009B7EDD /* QNService.swift */,
+				DD0386E61E123C3E00864E9C /* AppCache.swift */,
+				DD373A5F1E4A0AD0002CC39F /* QNConfig.swift */,
+				DD373A611E4A13ED002CC39F /* AppConfig.swift */,
+				DDC266061E5419B30061F5DA /* ImageService.swift */,
+			);
+			path = UPImage;
+			sourceTree = "<group>";
+		};
+		F5DF376CCCFA2E6993D6955B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C301C4BE1F58FB2D03C818 /* Pods_QSIMageBucket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD7B7E5B1D322CC700B68805 /* QSIMageBucket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD7B7E691D322CC700B68805 /* Build configuration list for PBXNativeTarget "QSIMageBucket" */;
+			buildPhases = (
+				6A8B62D9AF77E000A69C2630 /* [CP] Check Pods Manifest.lock */,
+				DD7B7E581D322CC700B68805 /* Sources */,
+				DD7B7E591D322CC700B68805 /* Frameworks */,
+				DD7B7E5A1D322CC700B68805 /* Resources */,
+				50EC8073D39A9D4A030E7A35 /* [CP] Embed Pods Frameworks */,
+				1E2B0980C6A11CB92A9DFC83 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSIMageBucket;
+			productName = UPImage;
+			productReference = DD7B7E5C1D322CC700B68805 /* QSIMageBucket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD7B7E541D322CC700B68805 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = chenxt;
+				TargetAttributes = {
+					DD7B7E5B1D322CC700B68805 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 554Q59PJJ2;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DD7B7E571D322CC700B68805 /* Build configuration list for PBXProject "QSIMageBucket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD7B7E531D322CC700B68805;
+			productRefGroup = DD7B7E5D1D322CC700B68805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD7B7E5B1D322CC700B68805 /* QSIMageBucket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD7B7E5A1D322CC700B68805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7B7E621D322CC700B68805 /* Assets.xcassets in Resources */,
+				DD7B7E791D322D2200B68805 /* ImagePreferencesViewController.xib in Resources */,
+				1870065F1F332885009D7AD2 /* AliOSSImagePreferencesViewController.xib in Resources */,
+				DD7B7E7B1D322D7200B68805 /* MainMenu.xib in Resources */,
+				DD369FDC1D3CA0310080C369 /* GeneralViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E2B0980C6A11CB92A9DFC83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSIMageBucket/Pods-QSIMageBucket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50EC8073D39A9D4A030E7A35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSIMageBucket/Pods-QSIMageBucket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A8B62D9AF77E000A69C2630 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD7B7E581D322CC700B68805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7B7E601D322CC700B68805 /* AppDelegate.swift in Sources */,
+				1856E1C11F3990A6003C5725 /* QSUtils.m in Sources */,
+				18EAE5D61F39AF28008A5F19 /* OSSClient.swift in Sources */,
+				DD373A621E4A13ED002CC39F /* AppConfig.swift in Sources */,
+				18EAE5D41F39AF28008A5F19 /* OSSBucketModel.swift in Sources */,
+				18EAE5D81F39B471008A5F19 /* AliOSSConfig.swift in Sources */,
+				18EAE5DC1F39CECD008A5F19 /* OSSRequestModel.m in Sources */,
+				DD369FDB1D3CA0310080C369 /* GeneralViewController.swift in Sources */,
+				DDB6C2311E120378009B7EDD /* QNService.swift in Sources */,
+				DD7B7E741D322CEE00B68805 /* DragDestinationView.swift in Sources */,
+				DD9DCE061E632F63001C0BE5 /* SMMSService.swift in Sources */,
+				187006601F332885009D7AD2 /* AliOSSImagePreferencesViewController.swift in Sources */,
+				DD373A601E4A0AD0002CC39F /* QNConfig.swift in Sources */,
+				DD4DB49C1D35EDF600FCD47C /* AppHelper.swift in Sources */,
+				DD7B7E781D322D2200B68805 /* ImagePreferencesViewController.swift in Sources */,
+				DDC266071E5419B30061F5DA /* ImageService.swift in Sources */,
+				DDE7BB1F1D3F4295009031F3 /* PasteboardObserver.swift in Sources */,
+				18EAE5D51F39AF28008A5F19 /* OSSBucketModelParser.swift in Sources */,
+				DD0386E71E123C3E00864E9C /* AppCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DD7B7E671D322CC700B68805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD7B7E681D322CC700B68805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD7B7E6A1D322CC700B68805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DCDD048A1815FE5E53EA3F3 /* Pods-QSIMageBucket.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PicU.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 554Q59PJJ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = UPImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenxt.upi;
+				PRODUCT_NAME = QSIMageBucket;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UPImage/OC-birdge.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DD7B7E6B1D322CC700B68805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E53AF96F97F05DBEE08DD030 /* Pods-QSIMageBucket.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PicU.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 554Q59PJJ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = UPImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenxt.upi;
+				PRODUCT_NAME = QSIMageBucket;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UPImage/OC-birdge.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD7B7E571D322CC700B68805 /* Build configuration list for PBXProject "QSIMageBucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7B7E671D322CC700B68805 /* Debug */,
+				DD7B7E681D322CC700B68805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD7B7E691D322CC700B68805 /* Build configuration list for PBXNativeTarget "QSIMageBucket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD7B7E6A1D322CC700B68805 /* Debug */,
+				DD7B7E6B1D322CC700B68805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD7B7E541D322CC700B68805 /* Project object */;
+}
