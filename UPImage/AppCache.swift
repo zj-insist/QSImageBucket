@@ -21,6 +21,12 @@ extension DiskCache where Self : NSCoding{
          let cacheDir = NSHomeDirectory() + "/Documents";
         return  TMCache(name: "picCache", rootPath: cacheDir).object(forKey: key) as? Self;
     }
+    func removeAllCatch() {
+        let cacheDir = NSHomeDirectory() + "/Documents"
+        TMCache(name: "picCache", rootPath: cacheDir).removeAllObjects()
+        TMCache.shared().removeObject(forKey: "imageCache")
+        AppCache.shared.resetAppCache()
+    }
 }
 
 class AppCache: NSObject{
@@ -39,7 +45,7 @@ class AppCache: NSObject{
         
         switch appConfig.uploadType {
         case .AliOSSType:
-            ossConfig = AliOSSConfig.getInCahce("AliOSS_User_COnfig")
+            ossConfig = AliOSSConfig.getInCahce("AliOSS_User_Config")
         case .QNType:
             qnConfig = QNConfig.getInCahce("QN_Use_Config")
         case .defaultType:
@@ -56,9 +62,22 @@ class AppCache: NSObject{
             TMCache.shared().setObject(imagesCacheArr as NSCoding!, forKey: "imageCache")
         }
     }
-
-    
-
-    
-    
+    func resetAppCache() {
+        if let ac =  AppConfig.getInCahce("appConfig") {
+            appConfig = ac;
+        } else {
+            appConfig = AppConfig();
+        }
+        
+        imagesCacheArr.removeAll()
+        
+        switch appConfig.uploadType {
+        case .AliOSSType:
+            ossConfig = AliOSSConfig.getInCahce("AliOSS_User_Config")
+        case .QNType:
+            qnConfig = QNConfig.getInCahce("QN_Use_Config")
+        case .defaultType:
+            break;
+        }
+    }
 }

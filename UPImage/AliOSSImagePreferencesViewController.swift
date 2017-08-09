@@ -31,7 +31,11 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(clearCatch), name: NSNotification.Name(rawValue: "clearCatch"), object: nil)
+        setupSubViews()
+	}
+    
+    func setupSubViews() {
         guard let oss =  AppCache.shared.ossConfig else {
             AliOSSZonePopButton.selectItem(withTag: 1)
             statusLabel.cell?.title = "请配置图床"
@@ -43,9 +47,13 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
         accessKeyTextField.cell?.title = oss.accessKey;
         secretKeyTextField.cell?.title = oss.secretKey;
         bucketTextField.cell?.title = oss.bucket;
-//        urlPrefixTextField.cell?.title = qc.picUrlPrefix;
-//        markTextField.cell?.title = qc.mark;
-	}
+        //        urlPrefixTextField.cell?.title = qc.picUrlPrefix;
+        //        markTextField.cell?.title = qc.mark;
+    }
+    
+    func clearCatch() {
+        setupSubViews()
+    }
     
 	@IBAction func setDefault(_ sender: AnyObject) {
         //TODO: 将当前默认方式换成通知
@@ -94,7 +102,7 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
                 self?.statusLabel.cell?.title = "配置成功。"
                 self?.statusLabel.textColor = .magenta
                 self?.showAlert("验证成功", informative: "配置成功。")
-                ossConfig.setInCache("AliOSS_User_COnfig");
+                ossConfig.setInCache("AliOSS_User_Config");
                 AppCache.shared.ossConfig = ossConfig;
                 AppCache.shared.appConfig.setInCache("appConfig")
             }

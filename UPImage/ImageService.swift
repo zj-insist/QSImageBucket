@@ -13,7 +13,7 @@ class ImageService: NSObject {
     public func uploadImg(_ pboard: NSPasteboard) {
         let files: NSArray? = pboard.propertyList(forType: NSFilenamesPboardType) as? NSArray
         var data : Data?
-        statusItem.button?.image = NSImage(named: "loading-\(0)")
+//        statusItem.button?.image = NSImage(named: "loading-\(0)")
         statusItem.button?.image?.isTemplate = true
         if let files = files {
             guard let _ = NSImage(contentsOfFile: files.firstObject as! String) else {

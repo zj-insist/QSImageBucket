@@ -679,7 +679,7 @@
         <window title="U图床" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="114"/>
+            <rect key="contentRect" x="668" y="474" width="480" height="114"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="114"/>
@@ -741,7 +741,7 @@
                     <constraint firstItem="oms-TV-wr1" firstAttribute="leading" secondItem="gjp-hU-jUx" secondAttribute="trailing" constant="35" id="zFf-d1-PKj"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="116" y="466"/>
+            <point key="canvasLocation" x="298" y="472"/>
         </window>
         <menu id="fWa-rH-t3a">
             <items>
@@ -802,6 +802,15 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="KdW-8y-Z4B"/>
+                <menuItem title="清除缓存" tag="20" id="pwG-2o-qYD">
+                    <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                    <string key="userLabel">clear cache
+clear catch</string>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="z5N-de-did"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="qp1-I6-64o"/>
                 <menuItem title="退出" tag="3" id="RwN-h5-tla">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

@@ -24,10 +24,17 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
     @IBOutlet weak var markTextField: NSTextField!
     @IBOutlet weak var QNZonePopButton: NSPopUpButton!
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-        
+        setupSubViews()
+        NotificationCenter.default.addObserver(self, selector: #selector(clearCatch), name: NSNotification.Name(rawValue: "clearCatch"), object: nil)
+	}
+    
+    func setupSubViews() {
         guard let qc =  AppCache.shared.qnConfig else{
             QNZonePopButton.selectItem(withTag: 1)
             statusLabel.cell?.title = "请配置图床"
@@ -41,10 +48,12 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
         bucketTextField.cell?.title = qc.scope;
         urlPrefixTextField.cell?.title = qc.picUrlPrefix;
         markTextField.cell?.title = qc.mark;
-       
-        
-		
-	}
+    }
+    
+    func clearCatch() {
+        setupSubViews()
+    }
+    
 	@IBAction func setDefault(_ sender: AnyObject) {
 //		AppCache.shared.appConfig.useDefServer = true
 		statusLabel.cell?.title = "目前使用默认图床"
@@ -52,7 +61,6 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
         AppCache.shared.appConfig.uploadType = .defaultType
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setDefault"), object: self)
         AppCache.shared.appConfig.setInCache("appConfig")
-		
 	}
 	
     @IBAction func selectQNZone(_ sender: NSMenuItem) {

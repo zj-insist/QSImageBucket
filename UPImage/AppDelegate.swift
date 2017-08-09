@@ -53,28 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
     
     func initApp()  {
-        switch AppCache.shared.appConfig.linkType {
-        case .markdown:
-            MarkdownItem.state = 1
-        case .url:
-            MarkdownItem.state = 0
-        }
-        
-        switch AppCache.shared.appConfig.uploadType {
-        case .defaultType:
-            defaultMenu.state = 1
-        case .QNType:
-            QNMenu.state = 1
-        case .AliOSSType:
-            AliOSSMenu.state = 1
-        }
-        
-        pasteboardObserver.addSubscriber(self)
-        
-        if AppCache.shared.appConfig.autoUp {
-            pasteboardObserver.startObserving()
-            autoUpItem.state = 1
-        }
+        setupAppCache()
         
         NotificationCenter.default.addObserver(self, selector: #selector(notification), name: NSNotification.Name(rawValue: "MarkdownState"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(setUploadDefault), name: NSNotification.Name(rawValue: "setDefault"), object: nil)
@@ -88,6 +67,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = iconImage
         statusItem.button?.action = #selector(showMenu)
         statusItem.button?.target = self
+    }
+    
+    
+    func setupAppCache() {
+        //首先重置状态
+        defaultMenu.state = 0
+        QNMenu.state = 0
+        AliOSSMenu.state = 0
+        
+        
+        switch AppCache.shared.appConfig.linkType {
+        case .markdown:
+            MarkdownItem.state = 1
+        case .url:
+            MarkdownItem.state = 0
+        }
+        
+        switch AppCache.shared.appConfig.uploadType {
+        case .defaultType:
+            setupUploadMenuState(defaultMenu)
+        case .QNType:
+            setupUploadMenuState(QNMenu)
+        case .AliOSSType:
+            setupUploadMenuState(AliOSSMenu)
+        }
+        
+        pasteboardObserver.addSubscriber(self)
+        
+        if AppCache.shared.appConfig.autoUp {
+            pasteboardObserver.startObserving()
+            autoUpItem.state = 1
+        }
     }
     
     func setUploadDefault() {
@@ -115,10 +126,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             menu = AliOSSMenu
         }
         
-        if menu == uploadMenu {
+        if menu == uploadMenu && menu?.state == 1 {
             return
+        } else if menu?.state != 0 {
+            menu?.state = 1 - (menu?.state)!
         }
-        menu?.state = 1 - (menu?.state)!
         
         uploadMenu.state = 1 - uploadMenu.state
         
@@ -154,7 +166,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		cacheImageMenuItem.submenu = makeCacheImageMenu(AppCache.shared.imagesCacheArr)
 		statusItem.popUpMenu(statusMenu)
 	}
-	
+
 	@IBAction func statusMenuClicked(_ sender: NSMenuItem) {
 		switch sender.tag {
 			// 上传
@@ -190,24 +202,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let picUrl = imagesCache["url"] as! String
             NSPasteboard.general().setString(LinkType.getLink(path: picUrl, type: AppCache.shared.appConfig.linkType), forType: NSStringPboardType)
             AppCache.shared.appConfig.setInCache("appConfig")
-            break;
-            //选择默认方式上传
-        case 10:
+            //选择10、默认方式上传 11、七牛方式上传 12、阿里云方式上传
+        case 10,11,12:
             setupUploadMenuState(sender)
-            break;
-            //选择七牛方式上传
-        case 11:
-            setupUploadMenuState(sender)
-            break;
-            //选择阿里云方式上传
-        case 12:
-            setupUploadMenuState(sender)
-            break;
+            //清除缓存
+        case 20:
+            clearCatch()
 		default:
 			break
 		}
 		
 	}
+    
+    func clearCatch() {
+        showAlert("提示", informative: "你将重置所有已设置的配置（包含上传模式）以及所有上传历史记录，确定这么做么？") { [weak self] in
+            AppCache.shared.appConfig.removeAllCatch()
+            self?.setupAppCache()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "clearCatch"), object: self)
+        }
+    }
+    
+    func showAlert(_ message: String, informative: String, clickOK: @escaping () -> Void) {
+        let arlert = NSAlert()
+        arlert.messageText = message
+        arlert.informativeText = informative
+        arlert.addButton(withTitle: "确定")
+        arlert.addButton(withTitle: "取消")
+//        arlert.icon = NSImage(named: "Failure")
+        
+        arlert.alertStyle = .warning
+        arlert.window.center()
+        arlert.beginSheetModal(for: self.window!, completionHandler: { (response) in
+            if response == NSAlertFirstButtonReturn {
+                clickOK()
+            }
+        })
+    }
 	
 	@IBAction func btnClick(_ sender: NSButton) {
 		switch sender.tag {
