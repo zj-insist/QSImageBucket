@@ -40,14 +40,10 @@ class AppCache: NSObject{
         switch appConfig.uploadType {
         case .AliOSSType:
             ossConfig = AliOSSConfig.getInCahce("AliOSS_User_COnfig")
-            qnConfig = nil
         case .QNType:
             qnConfig = QNConfig.getInCahce("QN_Use_Config")
-            ossConfig = nil
         case .defaultType:
-            qnConfig = nil
-            ossConfig = nil
-            
+            break;
         }
     }
     func adduploadImageToCache(_ dic: [String: AnyObject]) {

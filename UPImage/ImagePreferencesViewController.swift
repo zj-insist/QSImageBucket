@@ -13,7 +13,7 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
 	
 	override var identifier: String? { get { return "image" } set { super.identifier = newValue } }
 	var toolbarItemLabel: String? { get { return "七牛" } }
-	var toolbarItemImage: NSImage? { get { return NSImage(named: NSImageNameUser) } }
+	var toolbarItemImage: NSImage? { get { return NSImage(named: "qiniu-setting") } }
 	var window: NSWindow?
 	@IBOutlet weak var statusLabel: NSTextField!
 	@IBOutlet weak var accessKeyTextField: NSTextField!

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "WechatIMG2.jpeg",
+      "filename" : "defualt-menu.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "defualt-menu@2x.png",
       "scale" : "2x"
     },
     {

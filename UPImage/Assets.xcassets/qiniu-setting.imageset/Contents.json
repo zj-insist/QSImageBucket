@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "WechatIMG2.jpeg",
+      "filename" : "qiniu-setting.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "qiniu-setting@2x.png",
       "scale" : "2x"
     },
     {

@@ -13,7 +13,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PicU" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="QSIMageBucket" customModuleProvider="target">
             <connections>
                 <outlet property="AliOSSMenu" destination="roU-SH-kf9" id="BlX-nN-zdK"/>
                 <outlet property="MarkdownItem" destination="jTH-pG-yA9" id="ivg-YL-QoO"/>
@@ -766,19 +766,19 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="上传方式" id="9nL-aD-IEm">
                         <items>
-                            <menuItem title="默认" tag="10" id="8bv-Ph-LoL">
+                            <menuItem title="默认" image="defualt-menu" tag="10" id="8bv-Ph-LoL">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="ziu-Wi-UCb"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="七牛" tag="11" id="Xf6-Pd-yuL">
+                            <menuItem title="七牛" image="qiniu-menu" tag="11" id="Xf6-Pd-yuL">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="gwR-5v-0Hx"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="阿里云" tag="12" id="roU-SH-kf9">
+                            <menuItem title="阿里云" image="oss-menu" tag="12" id="roU-SH-kf9">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="Srq-kT-5rg"/>
@@ -814,5 +814,8 @@
     </objects>
     <resources>
         <image name="Icon_128x128" width="128" height="128"/>
+        <image name="defualt-menu" width="21" height="14"/>
+        <image name="oss-menu" width="20" height="16"/>
+        <image name="qiniu-menu" width="21" height="14"/>
     </resources>
 </document>

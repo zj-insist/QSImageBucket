@@ -13,7 +13,7 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
 	
 	override var identifier: String? { get { return "aliOSS" } set { super.identifier = newValue } }
 	var toolbarItemLabel: String? { get { return "OSS" } }
-	var toolbarItemImage: NSImage? { get { return NSImage(named: NSImageNameInfo) } }
+	var toolbarItemImage: NSImage? { get { return NSImage(named: "oss-setting") } }
 	var window: NSWindow?
 	@IBOutlet weak var statusLabel: NSTextField!
 	@IBOutlet weak var accessKeyTextField: NSTextField!
