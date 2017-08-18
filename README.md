@@ -7,13 +7,13 @@
 
 </p> -->
 
-<!-- <p align="center">  -->
+<p> 
 
 <img src="https://img.shields.io/badge/language-swift-red.svg" >
 <img src="https://img.shields.io/badge/platform-mac%20os-lightgrey.svg" >
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-373737.svg" ></a>
 
-<!-- </p> -->
+</p>
 
 QSImageBucket is revised on the basis of the [PicU](https://github.com/chenxtdo/UPImageMacApp).It's a tool for Mac, that can easily upload picture to servers and save a markdown link in the clipboard. Now, QSImageBucket supports a default server,[QNServer](https://www.qiniu.com/) and [AliyunOSS](https://www.aliyun.com/product/oss).  
 
