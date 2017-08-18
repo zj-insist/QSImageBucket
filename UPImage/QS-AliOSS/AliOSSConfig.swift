@@ -81,7 +81,5 @@ class AliOSSConfig: NSObject,NSCoding,DiskCache  {
         self.secretKey = secretKey;
         self.zone = zone;
     }
-    
-    
 
 }

@@ -27,6 +27,10 @@ extension DiskCache where Self : NSCoding{
         TMCache.shared().removeObject(forKey: "imageCache")
         AppCache.shared.resetAppCache()
     }
+    func clearUploadImageCatch() {
+        AppCache.shared.imagesCacheArr.removeAll()
+        TMCache.shared().removeObject(forKey: "imageCache")
+    }
 }
 
 class AppCache: NSObject{
@@ -38,19 +42,13 @@ class AppCache: NSObject{
     fileprivate override init() {
         super.init()
         if let ac =  AppConfig.getInCahce("appConfig") {
-            appConfig = ac;
+            appConfig = ac
         } else {
-            appConfig = AppConfig();
+            appConfig = AppConfig()
         }
         
-        switch appConfig.uploadType {
-        case .AliOSSType:
-            ossConfig = AliOSSConfig.getInCahce("AliOSS_User_Config")
-        case .QNType:
-            qnConfig = QNConfig.getInCahce("QN_Use_Config")
-        case .defaultType:
-            break;
-        }
+        ossConfig = AliOSSConfig.getInCahce("AliOSS_User_Config")
+        qnConfig = QNConfig.getInCahce("QN_Use_Config")
     }
     func adduploadImageToCache(_ dic: [String: AnyObject]) {
         if imagesCacheArr.count < 5 {
@@ -63,21 +61,10 @@ class AppCache: NSObject{
         }
     }
     func resetAppCache() {
-        if let ac =  AppConfig.getInCahce("appConfig") {
-            appConfig = ac;
-        } else {
-            appConfig = AppConfig();
-        }
+        appConfig = AppConfig()
+        ossConfig = nil
+        qnConfig = nil
         
         imagesCacheArr.removeAll()
-        
-        switch appConfig.uploadType {
-        case .AliOSSType:
-            ossConfig = AliOSSConfig.getInCahce("AliOSS_User_Config")
-        case .QNType:
-            qnConfig = QNConfig.getInCahce("QN_Use_Config")
-        case .defaultType:
-            break;
-        }
     }
 }

@@ -788,13 +788,6 @@
                     </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="oux-pv-ZwM"/>
-                <menuItem title="设置" tag="2" id="BK2-gn-dWl">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="Uix-4y-dzX"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="b8o-Xi-RbU"/>
                 <menuItem title="自动上传" tag="6" id="zra-zw-k7S">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -802,15 +795,25 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="KdW-8y-Z4B"/>
-                <menuItem title="清除缓存" tag="20" id="pwG-2o-qYD">
-                    <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
-                    <string key="userLabel">clear cache
-clear catch</string>
+                <menuItem title="设置" tag="2" id="BK2-gn-dWl">
+                    <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="z5N-de-did"/>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="Uix-4y-dzX"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="qp1-I6-64o"/>
+                <menuItem title="清除上传历史" tag="19" id="pwG-2o-qYD" userLabel="clear cache">
+                    <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="5re-jH-Quv"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="重置设置" tag="20" id="wDF-TH-rvh" userLabel="reset setting">
+                    <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
+                    <connections>
+                        <action selector="statusMenuClicked:" target="Voe-Tx-rLC" id="9KY-KO-0to"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="snm-QT-IpA"/>
                 <menuItem title="退出" tag="3" id="RwN-h5-tla">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

@@ -206,6 +206,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         case 10,11,12:
             setupUploadMenuState(sender)
             //清除缓存
+        case 19:
+            clearImageCatch()
         case 20:
             clearCatch()
 		default:
@@ -219,6 +221,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             AppCache.shared.appConfig.removeAllCatch()
             self?.setupAppCache()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "clearCatch"), object: self)
+        }
+    }
+    
+    
+    func clearImageCatch() {
+        showAlert("提示", informative: "确认清除上传历史记录？") { [weak self] in
+            AppCache.shared.appConfig.clearUploadImageCatch()
+            self?.setupAppCache()
         }
     }
     

@@ -153,7 +153,7 @@ extension OSSClient {
                     NotificationMessage("上传图片成功", isSuccess: true)
                     NSPasteboard.general().clearContents()
                     NSPasteboard.general()
-                    let picUrl = "http://" + ossConfig.bucket + "." + ossConfig.zoneHost + "/" + fileName
+                    let picUrl = "https://" + ossConfig.bucket + "." + ossConfig.zoneHost + "/" + fileName
                     let picUrlS  = LinkType.getLink(path:picUrl,type:AppCache.shared.appConfig.linkType)
                     NSPasteboard.general().setString(picUrlS, forType: NSStringPboardType)
                     let cacheDic: [String: AnyObject] = ["image": NSImage(data:data)!, "url": picUrl as AnyObject]

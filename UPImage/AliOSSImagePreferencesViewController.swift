@@ -39,6 +39,11 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
         guard let oss =  AppCache.shared.ossConfig else {
             AliOSSZonePopButton.selectItem(withTag: 1)
             statusLabel.cell?.title = "请配置图床"
+            statusLabel.textColor = .red
+            accessKeyTextField.cell?.title = ""
+            secretKeyTextField.cell?.title = ""
+            bucketTextField.cell?.title = ""
+            accessKeyTextField.becomeFirstResponder()
             return
         }
         statusLabel.cell?.title = "配置成功。"

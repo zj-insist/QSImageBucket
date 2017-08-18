@@ -38,6 +38,11 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
         guard let qc =  AppCache.shared.qnConfig else{
             QNZonePopButton.selectItem(withTag: 1)
             statusLabel.cell?.title = "请配置图床"
+            statusLabel.textColor = .red
+            accessKeyTextField.cell?.title = ""
+            secretKeyTextField.cell?.title = ""
+            bucketTextField.cell?.title = ""
+            accessKeyTextField.becomeFirstResponder()
             return
         }
         statusLabel.cell?.title = "配置成功。"
