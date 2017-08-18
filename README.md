@@ -37,6 +37,7 @@ QSImageBucket is in the process of improvement and has not been tested in safety
 - [x] Save five pictures of historical links.
 - [x] Markdown link or common http link.
 - [x] Custom `QNServer` and `AliyunOSS`.
+- [x] Clear history.
 
 ## Next Steps
 
