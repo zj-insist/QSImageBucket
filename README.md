@@ -23,7 +23,10 @@ drag image
 ![drag](/pic/drag-upload.gif)  
 
 copy image  
-![copy](/pic/copy-upload.gif)
+![copy](/pic/copy-upload.gif)  
+
+## Download  
+[QSImageBucket](https://github.com/zj-insist/QSImageBucket/releases)
 
 ## Importance  
 
