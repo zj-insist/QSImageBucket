@@ -86,16 +86,17 @@ class OSSClient: NSObject {
                 completeBlock(.fail)
                 return;
             }
-            if bucketList != nil {
+            if (bucketList != nil && (bucketList?.count)! > 0) {
                 for obj in bucketList! {
                     if (obj.name == bucket && obj.location == location) {
                         completeBlock(.sucess)
-                        break;
+                        return;
                     } else if (obj.name == bucket && obj.location != location) {
                         completeBlock(.errorLocation)
-                        break;
+                        return;
                     }
                 }
+                completeBlock(.none)
             } else {
                 completeBlock(.none)
             }

@@ -97,12 +97,12 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
             self?.checkButton.title = "验证配置"
             
             switch avaliableType {
-            case .fail:
+            case .none:
                 self?.showAlert("验证失败", informative: "验证失败，请仔细填写信息。")
+            case .fail:
+                self?.showAlert("验证失败", informative: "验证失败，请重试。")
             case .errorLocation:
                 self?.showAlert("验证失败", informative: "所选区域与Bucket所在区域不匹配")
-            case .none:
-                self?.showAlert("验证失败", informative: "没有匹配到对应的BUcket")
             case .sucess:
                 self?.statusLabel.cell?.title = "配置成功。"
                 self?.statusLabel.textColor = .magenta
