@@ -53,6 +53,8 @@ class DragDestinationView: NSView {
 	override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
 		let pboard = sender.draggingPasteboard()
 		ImageService.shared.uploadImg(pboard)
+        statusItem.button?.image = NSImage(named: "StatusIcon")
+        statusItem.button?.image?.isTemplate = true
 		return true
 	}
 }
