@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DDD7F02D1E6D433700B685D8 /* QSIMageBucket.entitlements */,
-				DD7B7E5E1D322CC700B68805 /* UPImage */,
+				DD7B7E5E1D322CC700B68805 /* QSIMageBucket */,
 				DD7B7E5D1D322CC700B68805 /* Products */,
 				8678AFDE00AA4AA14BB417A0 /* Pods */,
 				F5DF376CCCFA2E6993D6955B /* Frameworks */,
@@ -127,7 +127,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD7B7E5E1D322CC700B68805 /* UPImage */ = {
+		DD7B7E5E1D322CC700B68805 /* QSIMageBucket */ = {
 			isa = PBXGroup;
 			children = (
 				1856E1BA1F399078003C5725 /* QS-AliOSS */,
@@ -152,7 +152,7 @@
 				DD373A611E4A13ED002CC39F /* AppConfig.swift */,
 				DDC266061E5419B30061F5DA /* ImageService.swift */,
 			);
-			path = UPImage;
+			path = QSIMageBucket;
 			sourceTree = "<group>";
 		};
 		F5DF376CCCFA2E6993D6955B /* Frameworks */ = {
@@ -422,7 +422,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = UPImage/Info.plist;
+				INFOPLIST_FILE = QSIMageBucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
@@ -431,7 +431,7 @@
 				PRODUCT_NAME = QSIMageBucket;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "UPImage/OC-birdge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "QSIMageBucket/OC-birdge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -450,7 +450,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = UPImage/Info.plist;
+				INFOPLIST_FILE = QSIMageBucket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
@@ -458,7 +458,7 @@
 				PRODUCT_NAME = QSIMageBucket;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "UPImage/OC-birdge.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "QSIMageBucket/OC-birdge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
