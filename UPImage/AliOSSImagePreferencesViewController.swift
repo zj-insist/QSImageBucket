@@ -35,15 +35,14 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
         setupSubViews()
 	}
     
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        setupSubViews()
+    }
+    
     func setupSubViews() {
         guard let oss =  AppCache.shared.ossConfig else {
-            AliOSSZonePopButton.selectItem(withTag: 1)
-            statusLabel.cell?.title = "请配置图床"
-            statusLabel.textColor = .red
-            accessKeyTextField.cell?.title = ""
-            secretKeyTextField.cell?.title = ""
-            bucketTextField.cell?.title = ""
-            accessKeyTextField.becomeFirstResponder()
+            resetView()
             return
         }
         statusLabel.cell?.title = "配置成功。"
@@ -52,23 +51,36 @@ class AliOSSImagePreferencesViewController: NSViewController, MASPreferencesView
         accessKeyTextField.cell?.title = oss.accessKey;
         secretKeyTextField.cell?.title = oss.secretKey;
         bucketTextField.cell?.title = oss.bucket;
-        //        urlPrefixTextField.cell?.title = qc.picUrlPrefix;
-        //        markTextField.cell?.title = qc.mark;
+    }
+    
+    func resetView() {
+        AliOSSZonePopButton.selectItem(withTag: 1)
+        statusLabel.cell?.title = "请配置图床"
+        statusLabel.textColor = .red
+        accessKeyTextField.cell?.title = ""
+        secretKeyTextField.cell?.title = ""
+        bucketTextField.cell?.title = ""
+        accessKeyTextField.becomeFirstResponder()
     }
     
     func clearCatch() {
         setupSubViews()
     }
     
-	@IBAction func setDefault(_ sender: AnyObject) {
-        //TODO: 将当前默认方式换成通知
-//		AppCache.shared.appConfig.useDefServer = true
-		statusLabel.cell?.title = "目前使用默认图床"
-        AppCache.shared.appConfig.setInCache("appConfig")
-        //选择使用默认后发送通知
-        AppCache.shared.appConfig.uploadType = .defaultType
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setDefault"), object: self)
-	}
+    
+    @IBAction func resetInput(_ sender: NSButton) {
+        resetView()
+    }
+    
+//	@IBAction func setDefault(_ sender: AnyObject) {
+//        //TODO: 将当前默认方式换成通知
+////		AppCache.shared.appConfig.useDefServer = true
+//		statusLabel.cell?.title = "目前使用默认图床"
+//        AppCache.shared.appConfig.setInCache("appConfig")
+//        //选择使用默认后发送通知
+//        AppCache.shared.appConfig.uploadType = .defaultType
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setDefault"), object: self)
+//	}
 	
     @IBAction func selectAliOSSZone(_ sender: NSMenuItem) {
         AliOSSZonePopButton.select(sender);

@@ -34,15 +34,14 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
         NotificationCenter.default.addObserver(self, selector: #selector(clearCatch), name: NSNotification.Name(rawValue: "clearCatch"), object: nil)
 	}
     
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        setupSubViews()
+    }
+    
     func setupSubViews() {
         guard let qc =  AppCache.shared.qnConfig else{
-            QNZonePopButton.selectItem(withTag: 1)
-            statusLabel.cell?.title = "请配置图床"
-            statusLabel.textColor = .red
-            accessKeyTextField.cell?.title = ""
-            secretKeyTextField.cell?.title = ""
-            bucketTextField.cell?.title = ""
-            accessKeyTextField.becomeFirstResponder()
+            resetView()
             return
         }
         statusLabel.cell?.title = "配置成功。"
@@ -55,18 +54,35 @@ class ImagePreferencesViewController: NSViewController, MASPreferencesViewContro
         markTextField.cell?.title = qc.mark;
     }
     
+    func resetView() {
+        QNZonePopButton.selectItem(withTag: 1)
+        statusLabel.cell?.title = "请配置图床"
+        statusLabel.textColor = .red
+        accessKeyTextField.cell?.title = ""
+        secretKeyTextField.cell?.title = ""
+        bucketTextField.cell?.title = ""
+        urlPrefixTextField.cell?.title = ""
+        markTextField.cell?.title = ""
+        accessKeyTextField.becomeFirstResponder()
+    }
+    
     func clearCatch() {
         setupSubViews()
     }
     
-	@IBAction func setDefault(_ sender: AnyObject) {
-//		AppCache.shared.appConfig.useDefServer = true
-		statusLabel.cell?.title = "目前使用默认图床"
-//		statusLabel.textColor = .red
-        AppCache.shared.appConfig.uploadType = .defaultType
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setDefault"), object: self)
-        AppCache.shared.appConfig.setInCache("appConfig")
-	}
+    @IBAction func resetInput(_ sender: NSButton) {
+        resetView()
+    }
+    
+    
+//	@IBAction func setDefault(_ sender: AnyObject) {
+////		AppCache.shared.appConfig.useDefServer = true
+//		statusLabel.cell?.title = "目前使用默认图床"
+////		statusLabel.textColor = .red
+//        AppCache.shared.appConfig.uploadType = .defaultType
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "setDefault"), object: self)
+//        AppCache.shared.appConfig.setInCache("appConfig")
+//	}
 	
     @IBAction func selectQNZone(_ sender: NSMenuItem) {
         
