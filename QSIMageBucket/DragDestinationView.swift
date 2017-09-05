@@ -32,7 +32,6 @@ class DragDestinationView: NSView {
 		
 		if checkImageFile(pboard) {
 			statusItem.button?.image = NSImage(named: "upload")
-			statusItem.button?.image?.isTemplate = true
 			
 			return NSDragOperation.copy
 		} else {
@@ -42,7 +41,6 @@ class DragDestinationView: NSView {
 	
 	override func draggingExited(_ sender: NSDraggingInfo?) {
 		statusItem.button?.image = NSImage(named: "StatusIcon")
-		statusItem.button?.image?.isTemplate = true
 	}
 	
 	override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
@@ -54,7 +52,6 @@ class DragDestinationView: NSView {
 		let pboard = sender.draggingPasteboard()
 		ImageService.shared.uploadImg(pboard)
         statusItem.button?.image = NSImage(named: "StatusIcon")
-        statusItem.button?.image?.isTemplate = true
 		return true
 	}
 }

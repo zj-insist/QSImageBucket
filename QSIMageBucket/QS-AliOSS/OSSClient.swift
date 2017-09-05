@@ -120,10 +120,8 @@ class OSSClient: NSObject {
             print("Upload Progress: \(progress.fractionCompleted)")
             //上传进度
             statusItem.button?.image = NSImage(named: "loading-\(Int(progress.fractionCompleted*10))")
-            statusItem.button?.image?.isTemplate = true
         }).responseString { response in
             statusItem.button?.image = NSImage(named: "StatusIcon")
-            statusItem.button?.image?.isTemplate = true
             switch response.result {
                 
             case .success:

@@ -123,11 +123,9 @@ extension QNService{
         let token = QNToken
         let opt = QNUploadOption(progressHandler: { (key, percent) in
             statusItem.button?.image = NSImage(named: "loading-\(Int(percent*10))")
-            statusItem.button?.image?.isTemplate = true
         })
         let hanlder: (QNResponseInfo?, String?, [AnyHashable : Any]?, NSImage) -> () = { (info, key, resp, image) in
             statusItem.button?.image = NSImage(named: "StatusIcon")
-            statusItem.button?.image?.isTemplate = true
             guard let _ = info, let _ = resp else {
                 NotificationMessage("上传图片失败", informative: "可能是配置信息错误，或者是Token过去。请仔细检查配置信息，或重新上传")
                 return

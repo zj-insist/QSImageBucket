@@ -63,7 +63,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let statusBarButton = DragDestinationView(frame: (statusItem.button?.bounds)!)
         statusItem.button?.superview?.addSubview(statusBarButton, positioned: .below, relativeTo: statusItem.button)
         let iconImage = NSImage(named: "StatusIcon")
-        iconImage?.isTemplate = true
         statusItem.button?.image = iconImage
         statusItem.button?.action = #selector(showMenu)
         statusItem.button?.target = self

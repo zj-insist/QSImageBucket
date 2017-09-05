@@ -1,13 +1,13 @@
 
 # QSImageBucket
 
-<!-- <p align="center">
+<p align="center">
 
 <img src="pic/2017022646287Icon_128x128@2x.png" alt="PicU" title="PicU" width="100" height="100"/>
 
-</p> -->
+</p> 
 
-<p>
+<p align="center">
 <img src="https://img.shields.io/badge/language-swift-red.svg" >
 <img src="https://img.shields.io/badge/platform-mac%20os-lightgrey.svg" >
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-373737.svg" ></a>

@@ -825,7 +825,7 @@
         </menu>
     </objects>
     <resources>
-        <image name="Icon_128x128" width="128" height="128"/>
+        <image name="Icon_128x128" width="32" height="32"/>
         <image name="defualt-menu" width="21" height="14"/>
         <image name="oss-menu" width="20" height="16"/>
         <image name="qiniu-menu" width="21" height="14"/>

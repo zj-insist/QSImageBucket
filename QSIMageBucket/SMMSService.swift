@@ -38,10 +38,8 @@ class SMMSService: NSObject {
             formData.appendPart(withFileData: data, name: "smfile", fileName: fileName, mimeType: type)
         }, progress: { (progress) in
             statusItem.button?.image = NSImage(named: "loading-\(Int(progress.fractionCompleted*10))")
-            statusItem.button?.image?.isTemplate = true
         }, success: { (URLSessionDataTask, responseObject) in
             statusItem.button?.image = NSImage(named: "StatusIcon")
-            statusItem.button?.image?.isTemplate = true
             let re = responseObject as! [String:AnyObject];
             guard let url = re["data"]!.value(forKey: "url") as? String else{
                 return
@@ -56,7 +54,6 @@ class SMMSService: NSObject {
             AppCache.shared.adduploadImageToCache(cacheDic)
         }) { (URLSessionDataTask, error) in
             statusItem.button?.image = NSImage(named: "StatusIcon")
-            statusItem.button?.image?.isTemplate = true
             print(error);
         }
         
